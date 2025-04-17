@@ -68,14 +68,14 @@ namespace vdm
 		__forceinline auto rkm(std::uintptr_t addr) -> T
 		{
 			T buffer;
-			rkm((void*)&buffer, (void*)addr, sizeof T);
+			rkm((void*)&buffer, (void*)addr, sizeof(T));
 			return buffer;
 		}
 
 		template <class T>
 		__forceinline void* wkm(std::uintptr_t addr, const T& value)
 		{
-			return wkm((void*)addr, (void*)&value, sizeof T);
+			return wkm((void*)addr, (void*)&value, sizeof(T));
 		}
 
 		__forceinline auto get_peprocess(std::uint32_t pid) -> PEPROCESS

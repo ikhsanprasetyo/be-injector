@@ -67,7 +67,7 @@ int main( )
 	std::getchar( );
 
 	DWORD process_id;
-	const auto thread_id = GetWindowThreadProcessId( FindWindowA( "UnrealWindow", nullptr ), &process_id );
+	const auto thread_id = GetWindowThreadProcessId( FindWindowA( "sgaWindow", nullptr ), &process_id );
 
 	const auto hook = SetWindowsHookExA( WH_KEYBOARD, reinterpret_cast< HOOKPROC >( modules.first + 0x2000 ), reinterpret_cast< HMODULE >( modules.first ), thread_id );
 	
